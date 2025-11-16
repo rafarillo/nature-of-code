@@ -30,7 +30,6 @@ func DrawMain():
         await get_tree().create_timer(0.01).timeout
         queue_redraw()
 
-
 func particle_perlin_noise():
     var x:float = noise.get_noise_1d(xoff) * screeSize.x
     var y:float = noise.get_noise_1d(yoff) * screeSize.y
