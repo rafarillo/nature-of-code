@@ -6,7 +6,8 @@
 [node name="PerlinNoise2D" type="Node2D" node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_h6moc")
 sprite = NodePath("Sprite2D")
-_increment = 3.615
+_increment = 2.775
+_timeSpeed = 4.145
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
