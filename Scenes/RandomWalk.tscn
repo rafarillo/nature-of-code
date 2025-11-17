@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bewcgo2etnaw2"]
+
+[ext_resource type="Script" uid="uid://c103bmsxniljs" path="res://Scripts/RandomWalk.gd" id="1_t5apu"]
+[ext_resource type="Texture2D" uid="uid://chl4b17sk12p5" path="res://WhitePanel.png" id="2_ntg8c"]
+
+[node name="RandomWalk" type="Node2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_t5apu")
+sprite = NodePath("Canvas")
+
+[node name="Canvas" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_ntg8c")
