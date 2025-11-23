@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cprwtt25nko4e"]
 
-[ext_resource type="Script" uid="uid://dlk5fi5r5p23e" path="res://Scripts/PerlinNoise1D.gd" id="1_j4omi"]
+[ext_resource type="Script" uid="uid://dlk5fi5r5p23e" path="res://Scripts/PerlinNoise/PerlinNoise1D.gd" id="1_j4omi"]
 
 [node name="Node2D" type="Node2D"]
 

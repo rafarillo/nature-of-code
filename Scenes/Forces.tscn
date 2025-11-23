@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2tsn30r3nfcp"]
+
+[ext_resource type="Script" uid="uid://b5fxtul4lhbau" path="res://Scripts/ForceSimulation.gd" id="1_ka6jj"]
+[ext_resource type="Texture2D" uid="uid://brykxm0et2sf8" path="res://Circle.png" id="2_yot5c"]
+[ext_resource type="Script" uid="uid://bsjs6iwlk3ja6" path="res://Scripts/Particle.gd" id="3_5mnf5"]
+
+[node name="Forces" type="Node2D" node_paths=PackedStringArray("_particle")]
+script = ExtResource("1_ka6jj")
+_particle = NodePath("Sprite2D")
+_gravityIntensity = 5000.0
+_windForce = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(277, 84)
+texture = ExtResource("2_yot5c")
+script = ExtResource("3_5mnf5")

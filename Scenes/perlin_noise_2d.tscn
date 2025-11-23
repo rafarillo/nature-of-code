@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbvaorrkkslfg"]
 
-[ext_resource type="Script" uid="uid://bvscibf5mcy3a" path="res://Scripts/PerlinNoise2D.gd" id="1_h6moc"]
+[ext_resource type="Script" uid="uid://bvscibf5mcy3a" path="res://Scripts/PerlinNoise/PerlinNoise2D.gd" id="1_h6moc"]
 [ext_resource type="Texture2D" uid="uid://chl4b17sk12p5" path="res://WhitePanel.png" id="2_fo5bn"]
 
 [node name="PerlinNoise2D" type="Node2D" node_paths=PackedStringArray("sprite")]
