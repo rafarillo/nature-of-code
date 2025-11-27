@@ -12,8 +12,16 @@ var Vel:Vector2 =  Vector2.ZERO:
         Vel = new_value
     get:
         return Vel
+@export var Radius: float = 64:
+    set(new_value):
+        Radius = new_value
+    get:
+        return Radius
 
 var _acc:Vector2 = Vector2.ZERO
+var Mass: float:
+    get:
+        return _mass
 
 func ApplyForce(dt:float):
     _acc = Force / _mass
