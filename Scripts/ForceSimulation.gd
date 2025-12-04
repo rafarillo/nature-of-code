@@ -3,6 +3,7 @@ extends Node2D
 @export var _particles: Array[Particle]
 @export var _gravityIntensity: float = 10000.0
 @export var _windForce: Vector2 = Vector2.RIGHT
+var _frictionConstant = 0.1
 
 func _process(delta: float) -> void:
 	for particle in _particles:
@@ -14,7 +15,10 @@ func _process(delta: float) -> void:
 		if heighDiff >= 0:
 			particle.Vel.y *= -1.0
 			particle.position.y = get_window().size.y - particle.Radius
-			print("Friction")
+			var normal = particle.Mass
+			var frictionForce = (-1) * particle.Vel * normal * _frictionConstant
+			particle.Force += frictionForce
+
 		if particle.position.x >= get_window().size.x - particle.Radius or particle.position.x <= particle.Radius:
 			particle.Vel.x *= -1.0
 		particle.ApplyForce(delta)
