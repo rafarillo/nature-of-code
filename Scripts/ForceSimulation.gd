@@ -9,10 +9,12 @@ func _process(delta: float) -> void:
 		particle.Force = Vector2.DOWN * _gravityIntensity * particle.Mass
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			particle.Force += _windForce
-		particle.ApplyForce(delta)
 
-		if particle.position.y >= get_window().size.y - particle.Radius:
+		var heighDiff:float = particle.position.y - get_window().size.y + particle.Radius
+		if heighDiff >= 0:
 			particle.Vel.y *= -1.0
+			particle.position.y = get_window().size.y - particle.Radius
 			print("Friction")
 		if particle.position.x >= get_window().size.x - particle.Radius or particle.position.x <= particle.Radius:
 			particle.Vel.x *= -1.0
+		particle.ApplyForce(delta)
