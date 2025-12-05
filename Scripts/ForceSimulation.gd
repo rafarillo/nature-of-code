@@ -18,6 +18,8 @@ func _process(delta: float) -> void:
 			var normal = particle.Mass
 			var frictionForce = (-1) * particle.Vel * normal * _frictionConstant
 			particle.Force += frictionForce
+			# Other implementation of friction
+			# particle.Vel *= 0.95
 
 		if particle.position.x >= get_window().size.x - particle.Radius or particle.position.x <= particle.Radius:
 			particle.Vel.x *= -1.0
